@@ -1,0 +1,838 @@
+Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+==============================================================================
+
+Section Cross References
+
+    startup_mspm0g350x_uvision.o(RESET) refers to startup_mspm0g350x_uvision.o(STACK) for __initial_sp
+    startup_mspm0g350x_uvision.o(RESET) refers to startup_mspm0g350x_uvision.o(.text) for Reset_Handler
+    startup_mspm0g350x_uvision.o(RESET) refers to encoder.o(.text.GROUP1_IRQHandler) for GROUP1_IRQHandler
+    startup_mspm0g350x_uvision.o(RESET) refers to jy61p.o(.text.UART1_IRQHandler) for UART1_IRQHandler
+    startup_mspm0g350x_uvision.o(RESET) refers to k230.o(.text.UART2_IRQHandler) for UART2_IRQHandler
+    startup_mspm0g350x_uvision.o(RESET) refers to uart.o(.text.UART0_IRQHandler) for UART0_IRQHandler
+    startup_mspm0g350x_uvision.o(RESET) refers to main.o(.text.TIMG0_IRQHandler) for TIMG0_IRQHandler
+    startup_mspm0g350x_uvision.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for SYSCFG_DL_initPower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for SYSCFG_DL_GPIO_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for SYSCFG_DL_SYSCTL_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) for SYSCFG_DL_Motor_Control_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) for SYSCFG_DL_Servo_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) for SYSCFG_DL_TIMER_0_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) for SYSCFG_DL_NTB_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) for SYSCFG_DL_OLED_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) for SYSCFG_DL_Jy61p_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) for SYSCFG_DL_k230_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) for SYSCFG_DL_BLE_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) for SYSCFG_DL_jy61p_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_init) for SYSCFG_DL_DMA_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init) for SYSCFG_DL_SYSTICK_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.bss.gMotor_ControlBackup) for gMotor_ControlBackup
+    ti_msp_dl_config.o(.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.bss.gServoBackup) for gServoBackup
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for DL_GPIO_reset
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_Timer_reset) for DL_Timer_reset
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_I2C_reset) for DL_I2C_reset
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_UART_reset) for DL_UART_reset
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for DL_GPIO_enablePower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_Timer_enablePower) for DL_Timer_enablePower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_I2C_enablePower) for DL_I2C_enablePower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.DL_UART_enablePower) for DL_UART_enablePower
+    ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_initPower) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_initPower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralAnalogFunction) for DL_GPIO_initPeripheralAnalogFunction
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralOutputFunction) for DL_GPIO_initPeripheralOutputFunction
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for DL_GPIO_enableOutput
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralInputFunctionFeatures) for DL_GPIO_initPeripheralInputFunctionFeatures
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableHiZ) for DL_GPIO_enableHiZ
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralInputFunction) for DL_GPIO_initPeripheralInputFunction
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for DL_GPIO_initDigitalOutput
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalInputFeatures) for DL_GPIO_initDigitalInputFeatures
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_setUpperPinsPolarity) for DL_GPIO_setUpperPinsPolarity
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_clearInterruptStatus) for DL_GPIO_clearInterruptStatus
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableInterrupt) for DL_GPIO_enableInterrupt
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.DL_GPIO_setLowerPinsPolarity) for DL_GPIO_setLowerPinsPolarity
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_GPIO_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_GPIO_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for DL_SYSCTL_setBORThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setFlashWaitState) for DL_SYSCTL_setFlashWaitState
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for DL_SYSCTL_setSYSOSCFreq
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for DL_SYSCTL_disableHFXT
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for DL_SYSCTL_disableSYSPLL
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setHFCLKSourceHFXTParams) for DL_SYSCTL_setHFCLKSourceHFXTParams
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_configSYSPLL) for DL_SYSCTL_configSYSPLL
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for DL_SYSCTL_setULPCLKDivider
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_enableMFCLK) for DL_SYSCTL_enableMFCLK
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK) for DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.rodata.gSYSPLLConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSCTL_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSCTL_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to dl_timer.o(.text.DL_Timer_setClockConfig) for DL_Timer_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to dl_timer.o(.text.DL_Timer_initFourCCPWMMode) for DL_Timer_initFourCCPWMMode
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.text.DL_Timer_setCounterControl) for DL_Timer_setCounterControl
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl) for DL_Timer_setCaptureCompareOutCtl
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod) for DL_Timer_setCaptCompUpdateMethod
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.text.DL_Timer_enableClock) for DL_Timer_enableClock
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.text.DL_Timer_setCCPDirection) for DL_Timer_setCCPDirection
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.rodata.gMotor_ControlClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.rodata.gMotor_ControlConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_Motor_Control_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Motor_Control_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to dl_timer.o(.text.DL_Timer_setClockConfig) for DL_Timer_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to dl_timer.o(.text.DL_Timer_initFourCCPWMMode) for DL_Timer_initFourCCPWMMode
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.text.DL_Timer_setCounterControl) for DL_Timer_setCounterControl
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl) for DL_Timer_setCaptureCompareOutCtl
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod) for DL_Timer_setCaptCompUpdateMethod
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.text.DL_Timer_enableClock) for DL_Timer_enableClock
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.text.DL_Timer_setCCPDirection) for DL_Timer_setCCPDirection
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.rodata.gServoClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.rodata.gServoConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_Servo_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Servo_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to dl_timer.o(.text.DL_Timer_setClockConfig) for DL_Timer_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to dl_timer.o(.text.DL_Timer_initTimerMode) for DL_Timer_initTimerMode
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.text.DL_Timer_enableInterrupt) for DL_Timer_enableInterrupt
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.text.DL_Timer_enableClock) for DL_Timer_enableClock
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.rodata.gTIMER_0ClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.rodata.gTIMER_0TimerConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_TIMER_0_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_TIMER_0_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) refers to dl_timer.o(.text.DL_Timer_setClockConfig) for DL_Timer_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) refers to dl_timer.o(.text.DL_Timer_initTimerMode) for DL_Timer_initTimerMode
+    ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) refers to ti_msp_dl_config.o(.text.DL_Timer_enableClock) for DL_Timer_enableClock
+    ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) refers to ti_msp_dl_config.o(.rodata.gNTBClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) refers to ti_msp_dl_config.o(.rodata.gNTBTimerConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_NTB_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_NTB_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to dl_i2c.o(.text.DL_I2C_setClockConfig) for DL_I2C_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_setAnalogGlitchFilterPulseWidth) for DL_I2C_setAnalogGlitchFilterPulseWidth
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_enableAnalogGlitchFilter) for DL_I2C_enableAnalogGlitchFilter
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_resetControllerTransfer) for DL_I2C_resetControllerTransfer
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_setTimerPeriod) for DL_I2C_setTimerPeriod
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_setControllerTXFIFOThreshold) for DL_I2C_setControllerTXFIFOThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_setControllerRXFIFOThreshold) for DL_I2C_setControllerRXFIFOThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_enableControllerClockStretching) for DL_I2C_enableControllerClockStretching
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.DL_I2C_enableController) for DL_I2C_enableController
+    ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.rodata.gOLEDClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_OLED_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_OLED_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) refers to dl_i2c.o(.text.DL_I2C_setClockConfig) for DL_I2C_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) refers to ti_msp_dl_config.o(.text.DL_I2C_setAnalogGlitchFilterPulseWidth) for DL_I2C_setAnalogGlitchFilterPulseWidth
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) refers to ti_msp_dl_config.o(.text.DL_I2C_enableAnalogGlitchFilter) for DL_I2C_enableAnalogGlitchFilter
+    ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) refers to ti_msp_dl_config.o(.rodata.gJy61pClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_Jy61p_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_Jy61p_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to dl_uart.o(.text.DL_UART_setClockConfig) for DL_UART_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to dl_uart.o(.text.DL_UART_init) for DL_UART_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.DL_UART_setOversampling) for DL_UART_setOversampling
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.DL_UART_setBaudRateDivisor) for DL_UART_setBaudRateDivisor
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.DL_UART_enableInterrupt) for DL_UART_enableInterrupt
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.DL_UART_enable) for DL_UART_enable
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.rodata.gk230ClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.rodata.gk230Config) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_k230_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_k230_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to dl_uart.o(.text.DL_UART_setClockConfig) for DL_UART_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to dl_uart.o(.text.DL_UART_init) for DL_UART_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.DL_UART_setOversampling) for DL_UART_setOversampling
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.DL_UART_setBaudRateDivisor) for DL_UART_setBaudRateDivisor
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.DL_UART_enableInterrupt) for DL_UART_enableInterrupt
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.DL_UART_enable) for DL_UART_enable
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.rodata.gBLEClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.rodata.gBLEConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_BLE_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_BLE_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to dl_uart.o(.text.DL_UART_setClockConfig) for DL_UART_setClockConfig
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to dl_uart.o(.text.DL_UART_init) for DL_UART_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_setOversampling) for DL_UART_setOversampling
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_setBaudRateDivisor) for DL_UART_setBaudRateDivisor
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_enableInterrupt) for DL_UART_enableInterrupt
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for __NVIC_SetPriority
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_enableDMAReceiveEvent) for DL_UART_enableDMAReceiveEvent
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_enableFIFOs) for DL_UART_enableFIFOs
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_setRXFIFOThreshold) for DL_UART_setRXFIFOThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_setTXFIFOThreshold) for DL_UART_setTXFIFOThreshold
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_setRXInterruptTimeout) for DL_UART_setRXInterruptTimeout
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.DL_UART_enable) for DL_UART_enable
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.rodata.gjy61pClockConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.rodata.gjy61pConfig) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_jy61p_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_jy61p_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_CH0_init) for SYSCFG_DL_DMA_CH0_init
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_DMA_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init) refers to ti_msp_dl_config.o(.text.DL_SYSTICK_init) for DL_SYSTICK_init
+    ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init) refers to ti_msp_dl_config.o(.text.DL_SYSTICK_enable) for DL_SYSTICK_enable
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_SYSTICK_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_SYSTICK_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_saveConfiguration) refers to dl_timer.o(.text.DL_TimerA_saveConfiguration) for DL_TimerA_saveConfiguration
+    ti_msp_dl_config.o(.text.SYSCFG_DL_saveConfiguration) refers to ti_msp_dl_config.o(.bss.gMotor_ControlBackup) for gMotor_ControlBackup
+    ti_msp_dl_config.o(.text.SYSCFG_DL_saveConfiguration) refers to ti_msp_dl_config.o(.bss.gServoBackup) for gServoBackup
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_saveConfiguration) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_saveConfiguration) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_restoreConfiguration) refers to dl_timer.o(.text.DL_TimerA_restoreConfiguration) for DL_TimerA_restoreConfiguration
+    ti_msp_dl_config.o(.text.SYSCFG_DL_restoreConfiguration) refers to ti_msp_dl_config.o(.bss.gMotor_ControlBackup) for gMotor_ControlBackup
+    ti_msp_dl_config.o(.text.SYSCFG_DL_restoreConfiguration) refers to ti_msp_dl_config.o(.bss.gServoBackup) for gServoBackup
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_restoreConfiguration) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_restoreConfiguration) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_reset) refers to ti_msp_dl_config.o(.text.DL_GPIO_reset) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_reset) refers to ti_msp_dl_config.o(.text.DL_Timer_reset) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_reset) refers to ti_msp_dl_config.o(.text.DL_I2C_reset) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_reset) refers to ti_msp_dl_config.o(.text.DL_UART_reset) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enablePower) refers to ti_msp_dl_config.o(.text.DL_GPIO_enablePower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_enablePower) refers to ti_msp_dl_config.o(.text.DL_Timer_enablePower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_enablePower) refers to ti_msp_dl_config.o(.text.DL_I2C_enablePower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_enablePower) refers to ti_msp_dl_config.o(.text.DL_UART_enablePower) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initPeripheralAnalogFunction) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralAnalogFunction) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initPeripheralOutputFunction) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralOutputFunction) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableOutput) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initPeripheralInputFunctionFeatures) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralInputFunctionFeatures) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableHiZ) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableHiZ) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initPeripheralInputFunction) refers to ti_msp_dl_config.o(.text.DL_GPIO_initPeripheralInputFunction) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalOutput) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalOutput) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_initDigitalInputFeatures) refers to ti_msp_dl_config.o(.text.DL_GPIO_initDigitalInputFeatures) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_clearPins) refers to ti_msp_dl_config.o(.text.DL_GPIO_clearPins) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setUpperPinsPolarity) refers to ti_msp_dl_config.o(.text.DL_GPIO_setUpperPinsPolarity) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_clearInterruptStatus) refers to ti_msp_dl_config.o(.text.DL_GPIO_clearInterruptStatus) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_enableInterrupt) refers to ti_msp_dl_config.o(.text.DL_GPIO_enableInterrupt) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setPins) refers to ti_msp_dl_config.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_GPIO_setLowerPinsPolarity) refers to ti_msp_dl_config.o(.text.DL_GPIO_setLowerPinsPolarity) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setBORThreshold) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setBORThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setFlashWaitState) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setFlashWaitState) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setFlashWaitState) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setSYSOSCFreq) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setSYSOSCFreq) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableHFXT) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableHFXT) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_disableSYSPLL) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_disableSYSPLL) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_setULPCLKDivider) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_setULPCLKDivider) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSCTL_enableMFCLK) refers to ti_msp_dl_config.o(.text.DL_SYSCTL_enableMFCLK) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.__NVIC_SetPriority) refers to ti_msp_dl_config.o(.text.__NVIC_SetPriority) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_Timer_setCounterControl) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_setCounterControl) refers to ti_msp_dl_config.o(.text.DL_Timer_setCounterControl) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_enableClock) refers to ti_msp_dl_config.o(.text.DL_Timer_enableClock) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_setCCPDirection) refers to ti_msp_dl_config.o(.text.DL_Timer_setCCPDirection) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Timer_enableInterrupt) refers to ti_msp_dl_config.o(.text.DL_Timer_enableInterrupt) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_I2C_setAnalogGlitchFilterPulseWidth) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_setAnalogGlitchFilterPulseWidth) refers to ti_msp_dl_config.o(.text.DL_I2C_setAnalogGlitchFilterPulseWidth) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_enableAnalogGlitchFilter) refers to ti_msp_dl_config.o(.text.DL_I2C_enableAnalogGlitchFilter) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_resetControllerTransfer) refers to ti_msp_dl_config.o(.text.DL_I2C_resetControllerTransfer) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_setTimerPeriod) refers to ti_msp_dl_config.o(.text.DL_I2C_setTimerPeriod) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_I2C_setControllerTXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_setControllerTXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_I2C_setControllerTXFIFOThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_I2C_setControllerRXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_setControllerRXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_I2C_setControllerRXFIFOThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_enableControllerClockStretching) refers to ti_msp_dl_config.o(.text.DL_I2C_enableControllerClockStretching) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_I2C_enableController) refers to ti_msp_dl_config.o(.text.DL_I2C_enableController) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_UART_setOversampling) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_setOversampling) refers to ti_msp_dl_config.o(.text.DL_UART_setOversampling) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_UART_setBaudRateDivisor) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_setBaudRateDivisor) refers to ti_msp_dl_config.o(.text.DL_UART_setBaudRateDivisor) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_enableInterrupt) refers to ti_msp_dl_config.o(.text.DL_UART_enableInterrupt) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_enable) refers to ti_msp_dl_config.o(.text.DL_UART_enable) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_enableDMAReceiveEvent) refers to ti_msp_dl_config.o(.text.DL_UART_enableDMAReceiveEvent) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_enableFIFOs) refers to ti_msp_dl_config.o(.text.DL_UART_enableFIFOs) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_UART_setRXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_setRXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_UART_setRXFIFOThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_UART_setTXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_setTXFIFOThreshold) refers to ti_msp_dl_config.o(.text.DL_UART_setTXFIFOThreshold) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.DL_UART_setRXInterruptTimeout) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_UART_setRXInterruptTimeout) refers to ti_msp_dl_config.o(.text.DL_UART_setRXInterruptTimeout) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_CH0_init) refers to dl_dma.o(.text.DL_DMA_initChannel) for DL_DMA_initChannel
+    ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_CH0_init) refers to ti_msp_dl_config.o(.rodata.gDMA_CH0Config) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.SYSCFG_DL_DMA_CH0_init) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_DMA_CH0_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSTICK_init) refers to ti_msp_dl_config.o(.text.DL_SYSTICK_init) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_SYSTICK_enable) refers to ti_msp_dl_config.o(.text.DL_SYSTICK_enable) for [Anonymous Symbol]
+    ti_msp_dl_config.o(.ARM.exidx.text.DL_Common_updateReg) refers to ti_msp_dl_config.o(.text.DL_Common_updateReg) for [Anonymous Symbol]
+    track.o(.text.track_scan) refers to track.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    track.o(.text.track_scan) refers to fmul.o(.text) for __aeabi_fmul
+    track.o(.ARM.exidx.text.track_scan) refers to track.o(.text.track_scan) for [Anonymous Symbol]
+    track.o(.ARM.exidx.text.DL_GPIO_readPins) refers to track.o(.text.DL_GPIO_readPins) for [Anonymous Symbol]
+    track.o(.text.find_track) refers to track.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    track.o(.text.find_track) refers to ntb_time.o(.text.get_time_stamp_ms) for get_time_stamp_ms
+    track.o(.text.find_track) refers to track.o(.bss.find_track.time_ntb) for [Anonymous Symbol]
+    track.o(.ARM.exidx.text.find_track) refers to track.o(.text.find_track) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    track.o(.text.Judge_track) refers to track.o(.text.find_track) for find_track
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_R3) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_R2) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_R1) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_Mid) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_L1) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_L2) for [Anonymous Symbol]
+    track.o(.text.Judge_track) refers to track.o(.data.Judge_track.Pre_L3) for [Anonymous Symbol]
+    track.o(.ARM.exidx.text.Judge_track) refers to track.o(.text.Judge_track) for [Anonymous Symbol]
+    track.o(.text.Find_CrossRoad) refers to ntb_time.o(.text.get_time_stamp_ms) for get_time_stamp_ms
+    track.o(.text.Find_CrossRoad) refers to track.o(.bss.Total_TrackPins) for Total_TrackPins
+    track.o(.text.Find_CrossRoad) refers to main.o(.bss.Total_TrackPins) for Total_TrackPins
+    track.o(.text.Find_CrossRoad) refers to track.o(.bss.Find_CrossRoad.cross_state) for [Anonymous Symbol]
+    track.o(.text.Find_CrossRoad) refers to track.o(.bss.Find_CrossRoad.time_ntb) for [Anonymous Symbol]
+    track.o(.ARM.exidx.text.Find_CrossRoad) refers to track.o(.text.Find_CrossRoad) for [Anonymous Symbol]
+    track.o(.text.Find_RightAngle) refers to track.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    track.o(.text.Find_RightAngle) refers to ntb_time.o(.text.get_time_stamp_ms) for get_time_stamp_ms
+    track.o(.text.Find_RightAngle) refers to track.o(.bss.Total_TrackPins) for Total_TrackPins
+    track.o(.text.Find_RightAngle) refers to main.o(.bss.Total_TrackPins) for Total_TrackPins
+    track.o(.text.Find_RightAngle) refers to track.o(.bss.Find_RightAngle.cross_state) for [Anonymous Symbol]
+    track.o(.text.Find_RightAngle) refers to track.o(.bss.Find_RightAngle.time_ntb) for [Anonymous Symbol]
+    track.o(.ARM.exidx.text.Find_RightAngle) refers to track.o(.text.Find_RightAngle) for [Anonymous Symbol]
+    uart.o(.text.hhSerialSendByte) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for DL_UART_transmitDataBlocking
+    uart.o(.ARM.exidx.text.hhSerialSendByte) refers to uart.o(.text.hhSerialSendByte) for [Anonymous Symbol]
+    uart.o(.text.hhSerialSendString) refers to uart.o(.text.hhSerialSendByte) for hhSerialSendByte
+    uart.o(.ARM.exidx.text.hhSerialSendString) refers to uart.o(.text.hhSerialSendString) for [Anonymous Symbol]
+    uart.o(.text.hhSerialSendArray) refers to uart.o(.text.hhSerialSendByte) for hhSerialSendByte
+    uart.o(.ARM.exidx.text.hhSerialSendArray) refers to uart.o(.text.hhSerialSendArray) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.Serial_Pow) refers to uart.o(.text.Serial_Pow) for [Anonymous Symbol]
+    uart.o(.text.hhSerial_SendNumber) refers to uart.o(.text.Serial_Pow) for Serial_Pow
+    uart.o(.text.hhSerial_SendNumber) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    uart.o(.text.hhSerial_SendNumber) refers to uart.o(.text.hhSerialSendByte) for hhSerialSendByte
+    uart.o(.ARM.exidx.text.hhSerial_SendNumber) refers to uart.o(.text.hhSerial_SendNumber) for [Anonymous Symbol]
+    uart.o(.text.Serial_GetRxFlag) refers to uart.o(.bss.Serial_RxFlag) for Serial_RxFlag
+    uart.o(.ARM.exidx.text.Serial_GetRxFlag) refers to uart.o(.text.Serial_GetRxFlag) for [Anonymous Symbol]
+    uart.o(.text.fputc) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for DL_UART_transmitDataBlocking
+    uart.o(.ARM.exidx.text.fputc) refers to uart.o(.text.fputc) for [Anonymous Symbol]
+    uart.o(.text.fputs) refers to strlen.o(.text) for strlen
+    uart.o(.text.fputs) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for DL_UART_transmitDataBlocking
+    uart.o(.ARM.exidx.text.fputs) refers to uart.o(.text.fputs) for [Anonymous Symbol]
+    uart.o(.text.puts) refers to uart.o(.text.fputs) for fputs
+    uart.o(.text.puts) refers to stdout.o(.data) for __stdout
+    uart.o(.text.puts) refers to uart.o(.rodata.str1.1) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.puts) refers to uart.o(.text.puts) for [Anonymous Symbol]
+    uart.o(.text.Serial_Printf) refers to printfa.o(i.__0vsprintf) for vsprintf
+    uart.o(.text.Serial_Printf) refers to uart.o(.text.hhSerialSendString) for hhSerialSendString
+    uart.o(.ARM.exidx.text.Serial_Printf) refers to uart.o(.text.Serial_Printf) for [Anonymous Symbol]
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.text.DL_UART_getPendingInterrupt) for DL_UART_getPendingInterrupt
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.text.DL_UART_receiveData) for DL_UART_receiveData
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.text.DL_UART_transmitData) for DL_UART_transmitData
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.bss.UART0_IRQHandler.RxState) for [Anonymous Symbol]
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.bss.UART0_IRQHandler.pRxPacket) for [Anonymous Symbol]
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.bss.Serial_RxPacket) for Serial_RxPacket
+    uart.o(.text.UART0_IRQHandler) refers to uart.o(.bss.Serial_RxFlag) for Serial_RxFlag
+    uart.o(.ARM.exidx.text.UART0_IRQHandler) refers to uart.o(.text.UART0_IRQHandler) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.DL_UART_getPendingInterrupt) refers to uart.o(.text.DL_UART_getPendingInterrupt) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.DL_UART_receiveData) refers to uart.o(.text.DL_UART_receiveData) for [Anonymous Symbol]
+    uart.o(.ARM.exidx.text.DL_UART_transmitData) refers to uart.o(.text.DL_UART_transmitData) for [Anonymous Symbol]
+    uart.o(.text.CallbackAnalysis) refers to strtok.o(.text) for strtok
+    uart.o(.text.CallbackAnalysis) refers to strcmp.o(.text) for strcmp
+    uart.o(.text.CallbackAnalysis) refers to atoi.o(.text) for atoi
+    uart.o(.text.CallbackAnalysis) refers to fflti.o(.text) for __aeabi_i2f
+    uart.o(.text.CallbackAnalysis) refers to atof.o(i.atof) for atof
+    uart.o(.text.CallbackAnalysis) refers to d2f.o(.text) for __aeabi_d2f
+    uart.o(.text.CallbackAnalysis) refers to uart.o(.bss.Serial_RxPacket) for Serial_RxPacket
+    uart.o(.text.CallbackAnalysis) refers to uart.o(.rodata.str1.1) for [Anonymous Symbol]
+    uart.o(.text.CallbackAnalysis) refers to uart.o(.bss.Serial_RxFlag) for Serial_RxFlag
+    uart.o(.ARM.exidx.text.CallbackAnalysis) refers to uart.o(.text.CallbackAnalysis) for [Anonymous Symbol]
+    motor.o(.text.Motor_Init) refers to motor.o(.text.DL_Timer_startCounter) for DL_Timer_startCounter
+    motor.o(.text.Motor_Init) refers to motor.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    motor.o(.text.Motor_Init) refers to motor.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
+    motor.o(.text.Motor_Init) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    motor.o(.ARM.exidx.text.Motor_Init) refers to motor.o(.text.Motor_Init) for [Anonymous Symbol]
+    motor.o(.ARM.exidx.text.DL_Timer_startCounter) refers to motor.o(.text.DL_Timer_startCounter) for [Anonymous Symbol]
+    motor.o(.ARM.exidx.text.DL_GPIO_setPins) refers to motor.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
+    motor.o(.ARM.exidx.text.DL_GPIO_clearPins) refers to motor.o(.text.DL_GPIO_clearPins) for [Anonymous Symbol]
+    motor.o(.text.Motor_SetPWM) refers to motor.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
+    motor.o(.text.Motor_SetPWM) refers to motor.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    motor.o(.text.Motor_SetPWM) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    motor.o(.ARM.exidx.text.Motor_SetPWM) refers to motor.o(.text.Motor_SetPWM) for [Anonymous Symbol]
+    motor.o(.text.motor_stop) refers to motor.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    motor.o(.text.motor_stop) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    motor.o(.ARM.exidx.text.motor_stop) refers to motor.o(.text.motor_stop) for [Anonymous Symbol]
+    oled.o(.text.OLED_ColorTurn) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_ColorTurn) refers to oled.o(.text.OLED_ColorTurn) for [Anonymous Symbol]
+    oled.o(.text.OLED_WR_Byte) refers to oled.o(.text.DL_I2C_getControllerStatus) for DL_I2C_getControllerStatus
+    oled.o(.text.OLED_WR_Byte) refers to dl_i2c.o(.text.DL_I2C_fillControllerTXFIFO) for DL_I2C_fillControllerTXFIFO
+    oled.o(.text.OLED_WR_Byte) refers to oled.o(.text.DL_I2C_startControllerTransfer) for DL_I2C_startControllerTransfer
+    oled.o(.text.OLED_WR_Byte) refers to delay.o(.text.delay_us) for delay_us
+    oled.o(.ARM.exidx.text.OLED_WR_Byte) refers to oled.o(.text.OLED_WR_Byte) for [Anonymous Symbol]
+    oled.o(.text.OLED_DisplayTurn) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_DisplayTurn) refers to oled.o(.text.OLED_DisplayTurn) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.DL_I2C_getControllerStatus) refers to oled.o(.text.DL_I2C_getControllerStatus) for [Anonymous Symbol]
+    oled.o(.text.DL_I2C_startControllerTransfer) refers to oled.o(.text.DL_Common_updateReg) for DL_Common_updateReg
+    oled.o(.ARM.exidx.text.DL_I2C_startControllerTransfer) refers to oled.o(.text.DL_I2C_startControllerTransfer) for [Anonymous Symbol]
+    oled.o(.text.OLED_DisPlay_On) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_DisPlay_On) refers to oled.o(.text.OLED_DisPlay_On) for [Anonymous Symbol]
+    oled.o(.text.OLED_DisPlay_Off) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_DisPlay_Off) refers to oled.o(.text.OLED_DisPlay_Off) for [Anonymous Symbol]
+    oled.o(.text.OLED_Refresh) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.text.OLED_Refresh) refers to oled.o(.bss.OLED_GRAM) for OLED_GRAM
+    oled.o(.ARM.exidx.text.OLED_Refresh) refers to oled.o(.text.OLED_Refresh) for [Anonymous Symbol]
+    oled.o(.text.OLED_Clear) refers to oled.o(.text.OLED_Refresh) for OLED_Refresh
+    oled.o(.text.OLED_Clear) refers to oled.o(.bss.OLED_GRAM) for OLED_GRAM
+    oled.o(.ARM.exidx.text.OLED_Clear) refers to oled.o(.text.OLED_Clear) for [Anonymous Symbol]
+    oled.o(.text.OLED_DrawPoint) refers to oled.o(.bss.OLED_GRAM) for OLED_GRAM
+    oled.o(.ARM.exidx.text.OLED_DrawPoint) refers to oled.o(.text.OLED_DrawPoint) for [Anonymous Symbol]
+    oled.o(.text.OLED_ClearPoint) refers to oled.o(.bss.OLED_GRAM) for OLED_GRAM
+    oled.o(.ARM.exidx.text.OLED_ClearPoint) refers to oled.o(.text.OLED_ClearPoint) for [Anonymous Symbol]
+    oled.o(.text.OLED_DrawLine) refers to oled.o(.text.OLED_DrawPoint) for OLED_DrawPoint
+    oled.o(.text.OLED_DrawLine) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    oled.o(.ARM.exidx.text.OLED_DrawLine) refers to oled.o(.text.OLED_DrawLine) for [Anonymous Symbol]
+    oled.o(.text.OLED_DrawCircle) refers to oled.o(.text.OLED_DrawPoint) for OLED_DrawPoint
+    oled.o(.ARM.exidx.text.OLED_DrawCircle) refers to oled.o(.text.OLED_DrawCircle) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowChar) refers to oled.o(.text.OLED_DrawPoint) for OLED_DrawPoint
+    oled.o(.text.OLED_ShowChar) refers to oled.o(.text.OLED_ClearPoint) for OLED_ClearPoint
+    oled.o(.text.OLED_ShowChar) refers to oled.o(.rodata.asc2_2412) for asc2_2412
+    oled.o(.text.OLED_ShowChar) refers to oled.o(.rodata.asc2_1608) for asc2_1608
+    oled.o(.text.OLED_ShowChar) refers to oled.o(.rodata.asc2_1206) for asc2_1206
+    oled.o(.ARM.exidx.text.OLED_ShowChar) refers to oled.o(.text.OLED_ShowChar) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowString) refers to oled.o(.text.OLED_ShowChar) for OLED_ShowChar
+    oled.o(.ARM.exidx.text.OLED_ShowString) refers to oled.o(.text.OLED_ShowString) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.OLED_Pow) refers to oled.o(.text.OLED_Pow) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowNum) refers to oled.o(.text.OLED_Pow) for OLED_Pow
+    oled.o(.text.OLED_ShowNum) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    oled.o(.text.OLED_ShowNum) refers to oled.o(.text.OLED_ShowChar) for OLED_ShowChar
+    oled.o(.ARM.exidx.text.OLED_ShowNum) refers to oled.o(.text.OLED_ShowNum) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowSignedNum) refers to oled.o(.text.OLED_ShowChar) for OLED_ShowChar
+    oled.o(.text.OLED_ShowSignedNum) refers to oled.o(.text.OLED_ShowNum) for OLED_ShowNum
+    oled.o(.ARM.exidx.text.OLED_ShowSignedNum) refers to oled.o(.text.OLED_ShowSignedNum) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.text.OLED_DrawPoint) for OLED_DrawPoint
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.text.OLED_ClearPoint) for OLED_ClearPoint
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.data.Hzk4) for Hzk4
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.data.Hzk3) for Hzk3
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.data.Hzk2) for Hzk2
+    oled.o(.text.OLED_ShowChinese) refers to oled.o(.data.Hzk1) for Hzk1
+    oled.o(.ARM.exidx.text.OLED_ShowChinese) refers to oled.o(.text.OLED_ShowChinese) for [Anonymous Symbol]
+    oled.o(.text.OLED_WR_BP) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_WR_BP) refers to oled.o(.text.OLED_WR_BP) for [Anonymous Symbol]
+    oled.o(.text.OLED_ShowPicture) refers to oled.o(.text.OLED_WR_BP) for OLED_WR_BP
+    oled.o(.text.OLED_ShowPicture) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.ARM.exidx.text.OLED_ShowPicture) refers to oled.o(.text.OLED_ShowPicture) for [Anonymous Symbol]
+    oled.o(.text.OLED_Init) refers to delay.o(.text.delay_ms) for delay_ms
+    oled.o(.text.OLED_Init) refers to oled.o(.text.OLED_WR_Byte) for OLED_WR_Byte
+    oled.o(.text.OLED_Init) refers to oled.o(.text.OLED_Clear) for OLED_Clear
+    oled.o(.ARM.exidx.text.OLED_Init) refers to oled.o(.text.OLED_Init) for [Anonymous Symbol]
+    oled.o(.ARM.exidx.text.DL_Common_updateReg) refers to oled.o(.text.DL_Common_updateReg) for [Anonymous Symbol]
+    pid.o(.ARM.exidx.text.PID_Init) refers to pid.o(.text.PID_Init) for [Anonymous Symbol]
+    pid.o(.text.PID_Update) refers to fadd.o(.text) for __aeabi_fsub
+    pid.o(.text.PID_Update) refers to fcmpeq.o(.text) for __aeabi_fcmpeq
+    pid.o(.text.PID_Update) refers to fcmple.o(.text) for __aeabi_fcmple
+    pid.o(.text.PID_Update) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    pid.o(.text.PID_Update) refers to fmul.o(.text) for __aeabi_fmul
+    pid.o(.ARM.exidx.text.PID_Update) refers to pid.o(.text.PID_Update) for [Anonymous Symbol]
+    pid.o(.text.Error_PID_Updata) refers to fcmpeq.o(.text) for __aeabi_fcmpeq
+    pid.o(.text.Error_PID_Updata) refers to fadd.o(.text) for __aeabi_fadd
+    pid.o(.text.Error_PID_Updata) refers to fcmple.o(.text) for __aeabi_fcmple
+    pid.o(.text.Error_PID_Updata) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    pid.o(.text.Error_PID_Updata) refers to fmul.o(.text) for __aeabi_fmul
+    pid.o(.ARM.exidx.text.Error_PID_Updata) refers to pid.o(.text.Error_PID_Updata) for [Anonymous Symbol]
+    pid.o(.text.Angle_PID_Update) refers to fcmple.o(.text) for __aeabi_fcmple
+    pid.o(.text.Angle_PID_Update) refers to fadd.o(.text) for __aeabi_fadd
+    pid.o(.text.Angle_PID_Update) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    pid.o(.text.Angle_PID_Update) refers to fcmpeq.o(.text) for __aeabi_fcmpeq
+    pid.o(.text.Angle_PID_Update) refers to fmul.o(.text) for __aeabi_fmul
+    pid.o(.text.Angle_PID_Update) refers to fcmpgt.o(.text) for __aeabi_fcmpgt
+    pid.o(.text.Angle_PID_Update) refers to fcmplt.o(.text) for __aeabi_fcmplt
+    pid.o(.ARM.exidx.text.Angle_PID_Update) refers to pid.o(.text.Angle_PID_Update) for [Anonymous Symbol]
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.text.DL_UART_getPendingInterrupt) for DL_UART_getPendingInterrupt
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.text.DL_UART_receiveData) for DL_UART_receiveData
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.text.DL_UART_transmitData) for DL_UART_transmitData
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.bss.k230_ByteRecv) for k230_ByteRecv
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.bss.UART2_IRQHandler.RxState) for [Anonymous Symbol]
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.bss.UART2_IRQHandler.pRxPacket) for [Anonymous Symbol]
+    k230.o(.text.UART2_IRQHandler) refers to uart.o(.bss.Serial_RxPacket) for Serial_RxPacket
+    k230.o(.text.UART2_IRQHandler) refers to k230.o(.bss.k230_Serial_RxFlag) for k230_Serial_RxFlag
+    k230.o(.ARM.exidx.text.UART2_IRQHandler) refers to k230.o(.text.UART2_IRQHandler) for [Anonymous Symbol]
+    k230.o(.ARM.exidx.text.DL_UART_getPendingInterrupt) refers to k230.o(.text.DL_UART_getPendingInterrupt) for [Anonymous Symbol]
+    k230.o(.ARM.exidx.text.DL_UART_receiveData) refers to k230.o(.text.DL_UART_receiveData) for [Anonymous Symbol]
+    k230.o(.ARM.exidx.text.DL_UART_transmitData) refers to k230.o(.text.DL_UART_transmitData) for [Anonymous Symbol]
+    k230.o(.text.Get_VisualError) refers to strtok.o(.text) for strtok
+    k230.o(.text.Get_VisualError) refers to strcmp.o(.text) for strcmp
+    k230.o(.text.Get_VisualError) refers to atof.o(i.atof) for atof
+    k230.o(.text.Get_VisualError) refers to d2f.o(.text) for __aeabi_d2f
+    k230.o(.text.Get_VisualError) refers to k230.o(.bss.k230_Serial_RxPacket) for k230_Serial_RxPacket
+    k230.o(.text.Get_VisualError) refers to k230.o(.rodata.str1.1) for [Anonymous Symbol]
+    k230.o(.text.Get_VisualError) refers to k230.o(.bss.k230_flag) for k230_flag
+    k230.o(.ARM.exidx.text.Get_VisualError) refers to k230.o(.text.Get_VisualError) for [Anonymous Symbol]
+    key.o(.text.Key_GetNum) refers to key.o(.bss.Key_Num) for Key_Num
+    key.o(.ARM.exidx.text.Key_GetNum) refers to key.o(.text.Key_GetNum) for [Anonymous Symbol]
+    key.o(.text.Key_GetState) refers to key.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    key.o(.ARM.exidx.text.Key_GetState) refers to key.o(.text.Key_GetState) for [Anonymous Symbol]
+    key.o(.ARM.exidx.text.DL_GPIO_readPins) refers to key.o(.text.DL_GPIO_readPins) for [Anonymous Symbol]
+    key.o(.text.Key_Tick) refers to key.o(.text.Key_GetState) for Key_GetState
+    key.o(.text.Key_Tick) refers to key.o(.bss.Key_Tick.Count) for [Anonymous Symbol]
+    key.o(.text.Key_Tick) refers to key.o(.bss.Key_Tick.CurrState) for [Anonymous Symbol]
+    key.o(.text.Key_Tick) refers to key.o(.bss.Key_Tick.PrevState) for [Anonymous Symbol]
+    key.o(.text.Key_Tick) refers to key.o(.bss.Key_Num) for Key_Num
+    key.o(.ARM.exidx.text.Key_Tick) refers to key.o(.text.Key_Tick) for [Anonymous Symbol]
+    main.o(.text.main) refers to ti_msp_dl_config.o(.text.SYSCFG_DL_init) for SYSCFG_DL_init
+    main.o(.text.main) refers to oled.o(.text.OLED_Init) for OLED_Init
+    main.o(.text.main) refers to oled.o(.text.OLED_ColorTurn) for OLED_ColorTurn
+    main.o(.text.main) refers to oled.o(.text.OLED_DisplayTurn) for OLED_DisplayTurn
+    main.o(.text.main) refers to oled.o(.text.OLED_Clear) for OLED_Clear
+    main.o(.text.main) refers to pid.o(.text.PID_Init) for PID_Init
+    main.o(.text.main) refers to encoder.o(.text.encoder__init) for encoder__init
+    main.o(.text.main) refers to motor.o(.text.Motor_Init) for Motor_Init
+    main.o(.text.main) refers to servo.o(.text.Servo_Init) for Servo_Init
+    main.o(.text.main) refers to jy61p.o(.text.WIT_Init) for WIT_Init
+    main.o(.text.main) refers to beep.o(.text.Warning_Init) for Warning_Init
+    main.o(.text.main) refers to main.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    main.o(.text.main) refers to main.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    main.o(.text.main) refers to main.o(.text.DL_Timer_startCounter) for DL_Timer_startCounter
+    main.o(.text.main) refers to jy61p.o(.text.Serial_JY61P_Zero_Roll_Pitch) for Serial_JY61P_Zero_Roll_Pitch
+    main.o(.text.main) refers to jy61p.o(.text.Serial_JY61P_Zero_Yaw) for Serial_JY61P_Zero_Yaw
+    main.o(.text.main) refers to servo.o(.text.Servo_SetAngle) for Servo_SetAngle
+    main.o(.text.main) refers to ntb_time.o(.text.get_time_stamp_ms) for get_time_stamp_ms
+    main.o(.text.main) refers to oled.o(.text.OLED_ShowNum) for OLED_ShowNum
+    main.o(.text.main) refers to oled.o(.text.OLED_ShowChar) for OLED_ShowChar
+    main.o(.text.main) refers to oled.o(.text.OLED_Refresh) for OLED_Refresh
+    main.o(.text.main) refers to main.o(.data.SpeedPID) for SpeedPID
+    main.o(.text.main) refers to main.o(.data.TurnPID) for TurnPID
+    main.o(.text.main) refers to main.o(.data.YawPID) for YawPID
+    main.o(.text.main) refers to main.o(.data.Steper_XPID) for Steper_XPID
+    main.o(.text.main) refers to main.o(.data.Steper_YPID) for Steper_YPID
+    main.o(.text.main) refers to key.o(.bss.Key_Num) for Key_Num
+    main.o(.text.main) refers to ntb_time.o(.bss.Last_NTB) for Last_NTB
+    main.o(.text.main) refers to uart.o(.bss.Serial_RxPacket) for Serial_RxPacket
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to main.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to main.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.DL_Timer_startCounter) refers to main.o(.text.DL_Timer_startCounter) for [Anonymous Symbol]
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.text.DL_Timer_getPendingInterrupt) for DL_Timer_getPendingInterrupt
+    main.o(.text.TIMG0_IRQHandler) refers to key.o(.text.Key_Tick) for Key_Tick
+    main.o(.text.TIMG0_IRQHandler) refers to encoder.o(.text.Motor_GetSpeed) for Motor_GetSpeed
+    main.o(.text.TIMG0_IRQHandler) refers to dflti.o(.text) for __aeabi_i2d
+    main.o(.text.TIMG0_IRQHandler) refers to dmul.o(.text) for __aeabi_dmul
+    main.o(.text.TIMG0_IRQHandler) refers to ddiv.o(.text) for __aeabi_ddiv
+    main.o(.text.TIMG0_IRQHandler) refers to d2f.o(.text) for __aeabi_d2f
+    main.o(.text.TIMG0_IRQHandler) refers to fadd.o(.text) for __aeabi_fadd
+    main.o(.text.TIMG0_IRQHandler) refers to f2d.o(.text) for __aeabi_f2d
+    main.o(.text.TIMG0_IRQHandler) refers to pid.o(.text.PID_Update) for PID_Update
+    main.o(.text.TIMG0_IRQHandler) refers to dadd.o(.text) for __aeabi_dadd
+    main.o(.text.TIMG0_IRQHandler) refers to pid.o(.text.Angle_PID_Update) for Angle_PID_Update
+    main.o(.text.TIMG0_IRQHandler) refers to ntb_time.o(.text.get_time_stamp_ms) for get_time_stamp_ms
+    main.o(.text.TIMG0_IRQHandler) refers to printfa.o(i.__0printf) for printf
+    main.o(.text.TIMG0_IRQHandler) refers to fmul.o(.text) for __aeabi_fmul
+    main.o(.text.TIMG0_IRQHandler) refers to fcmple.o(.text) for __aeabi_fcmple
+    main.o(.text.TIMG0_IRQHandler) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.TIMG0_IRQHandler.count1) for [Anonymous Symbol]
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.TIMG0_IRQHandler.count2) for [Anonymous Symbol]
+    main.o(.text.TIMG0_IRQHandler) refers to encoder.o(.bss.Get_Encoder_countA) for Get_Encoder_countA
+    main.o(.text.TIMG0_IRQHandler) refers to encoder.o(.bss.Get_Encoder_countB) for Get_Encoder_countB
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.Encoder1) for Encoder1
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.Encoder2) for Encoder2
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.Position_Flag) for Position_Flag
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.Position) for Position
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.LeftSpeed) for LeftSpeed
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.RightSpeed) for RightSpeed
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.AveSpeed) for AveSpeed
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.DifSpeed) for DifSpeed
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.data.SpeedPID) for SpeedPID
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.AvePWM) for AvePWM
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.data.TurnPID) for TurnPID
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.data.YawFlag) for YawFlag
+    main.o(.text.TIMG0_IRQHandler) refers to jy61p.o(.bss.wit_data) for wit_data
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.data.YawPID) for YawPID
+    main.o(.text.TIMG0_IRQHandler) refers to ntb_time.o(.bss.Last_NTB) for Last_NTB
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.rodata.str1.1) for [Anonymous Symbol]
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.DifPWM) for DifPWM
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.LeftPWM) for LeftPWM
+    main.o(.text.TIMG0_IRQHandler) refers to main.o(.bss.RightPWM) for RightPWM
+    main.o(.ARM.exidx.text.TIMG0_IRQHandler) refers to main.o(.text.TIMG0_IRQHandler) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.DL_Timer_getPendingInterrupt) refers to main.o(.text.DL_Timer_getPendingInterrupt) for [Anonymous Symbol]
+    encoder.o(.text.encoder__init) refers to encoder.o(.text.__NVIC_ClearPendingIRQ) for __NVIC_ClearPendingIRQ
+    encoder.o(.text.encoder__init) refers to encoder.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    encoder.o(.ARM.exidx.text.encoder__init) refers to encoder.o(.text.encoder__init) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to encoder.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to encoder.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.Motor_GetSpeed) refers to encoder.o(.text.Motor_GetSpeed) for [Anonymous Symbol]
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.text.DL_GPIO_getEnabledInterruptStatus) for DL_GPIO_getEnabledInterruptStatus
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.text.DL_GPIO_readPins) for DL_GPIO_readPins
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.text.DL_GPIO_clearInterruptStatus) for DL_GPIO_clearInterruptStatus
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.bss.gpio_interrup) for gpio_interrup
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.bss.Get_Encoder_countB) for Get_Encoder_countB
+    encoder.o(.text.GROUP1_IRQHandler) refers to encoder.o(.bss.Get_Encoder_countA) for Get_Encoder_countA
+    encoder.o(.ARM.exidx.text.GROUP1_IRQHandler) refers to encoder.o(.text.GROUP1_IRQHandler) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.DL_GPIO_getEnabledInterruptStatus) refers to encoder.o(.text.DL_GPIO_getEnabledInterruptStatus) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.DL_GPIO_readPins) refers to encoder.o(.text.DL_GPIO_readPins) for [Anonymous Symbol]
+    encoder.o(.ARM.exidx.text.DL_GPIO_clearInterruptStatus) refers to encoder.o(.text.DL_GPIO_clearInterruptStatus) for [Anonymous Symbol]
+    jy61p.o(.text.Serial_JY61P_Zero_Roll_Pitch) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for DL_UART_transmitDataBlocking
+    jy61p.o(.text.Serial_JY61P_Zero_Roll_Pitch) refers to delay.o(.text.delay_ms) for delay_ms
+    jy61p.o(.ARM.exidx.text.Serial_JY61P_Zero_Roll_Pitch) refers to jy61p.o(.text.Serial_JY61P_Zero_Roll_Pitch) for [Anonymous Symbol]
+    jy61p.o(.text.Serial_JY61P_Zero_Yaw) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for DL_UART_transmitDataBlocking
+    jy61p.o(.text.Serial_JY61P_Zero_Yaw) refers to delay.o(.text.delay_ms) for delay_ms
+    jy61p.o(.ARM.exidx.text.Serial_JY61P_Zero_Yaw) refers to jy61p.o(.text.Serial_JY61P_Zero_Yaw) for [Anonymous Symbol]
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_DMA_disableChannel) for DL_DMA_disableChannel
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_DMA_getTransferSize) for DL_DMA_getTransferSize
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_UART_isRXFIFOEmpty) for DL_UART_isRXFIFOEmpty
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_UART_receiveData) for DL_UART_receiveData
+    jy61p.o(.text.UART1_IRQHandler) refers to dflti.o(.text) for __aeabi_i2d
+    jy61p.o(.text.UART1_IRQHandler) refers to ddiv.o(.text) for __aeabi_ddiv
+    jy61p.o(.text.UART1_IRQHandler) refers to dfixi.o(.text) for __aeabi_d2iz
+    jy61p.o(.text.UART1_IRQHandler) refers to d2f.o(.text) for __aeabi_d2f
+    jy61p.o(.text.UART1_IRQHandler) refers to dmul.o(.text) for __aeabi_dmul
+    jy61p.o(.text.UART1_IRQHandler) refers to dl_uart.o(.text.DL_UART_drainRXFIFO) for DL_UART_drainRXFIFO
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_DMA_setDestAddr) for DL_DMA_setDestAddr
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_DMA_setTransferSize) for DL_DMA_setTransferSize
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.text.DL_DMA_enableChannel) for DL_DMA_enableChannel
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.bss.wit_dmaBuffer) for wit_dmaBuffer
+    jy61p.o(.text.UART1_IRQHandler) refers to jy61p.o(.bss.wit_data) for wit_data
+    jy61p.o(.ARM.exidx.text.UART1_IRQHandler) refers to jy61p.o(.text.UART1_IRQHandler) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_disableChannel) refers to jy61p.o(.text.DL_DMA_disableChannel) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_getTransferSize) refers to jy61p.o(.text.DL_DMA_getTransferSize) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_UART_isRXFIFOEmpty) refers to jy61p.o(.text.DL_UART_isRXFIFOEmpty) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_UART_receiveData) refers to jy61p.o(.text.DL_UART_receiveData) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_setDestAddr) refers to jy61p.o(.text.DL_DMA_setDestAddr) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_setTransferSize) refers to jy61p.o(.text.DL_DMA_setTransferSize) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_enableChannel) refers to jy61p.o(.text.DL_DMA_enableChannel) for [Anonymous Symbol]
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.text.DL_DMA_setSrcAddr) for DL_DMA_setSrcAddr
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.text.DL_DMA_setDestAddr) for DL_DMA_setDestAddr
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.text.DL_DMA_setTransferSize) for DL_DMA_setTransferSize
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.text.DL_DMA_enableChannel) for DL_DMA_enableChannel
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.text.__NVIC_EnableIRQ) for __NVIC_EnableIRQ
+    jy61p.o(.text.WIT_Init) refers to jy61p.o(.bss.wit_dmaBuffer) for wit_dmaBuffer
+    jy61p.o(.ARM.exidx.text.WIT_Init) refers to jy61p.o(.text.WIT_Init) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.DL_DMA_setSrcAddr) refers to jy61p.o(.text.DL_DMA_setSrcAddr) for [Anonymous Symbol]
+    jy61p.o(.ARM.exidx.text.__NVIC_EnableIRQ) refers to jy61p.o(.text.__NVIC_EnableIRQ) for [Anonymous Symbol]
+    beep.o(.text.Warning_Init) refers to beep.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    beep.o(.ARM.exidx.text.Warning_Init) refers to beep.o(.text.Warning_Init) for [Anonymous Symbol]
+    beep.o(.ARM.exidx.text.DL_GPIO_setPins) refers to beep.o(.text.DL_GPIO_setPins) for [Anonymous Symbol]
+    beep.o(.text.warning) refers to beep.o(.text.DL_GPIO_clearPins) for DL_GPIO_clearPins
+    beep.o(.text.warning) refers to delay.o(.text.delay_ms) for delay_ms
+    beep.o(.text.warning) refers to beep.o(.text.DL_GPIO_setPins) for DL_GPIO_setPins
+    beep.o(.ARM.exidx.text.warning) refers to beep.o(.text.warning) for [Anonymous Symbol]
+    beep.o(.ARM.exidx.text.DL_GPIO_clearPins) refers to beep.o(.text.DL_GPIO_clearPins) for [Anonymous Symbol]
+    delay.o(.text.delay_us) refers to dl_common.o(.text.DL_Common_delayCycles) for DL_Common_delayCycles
+    delay.o(.ARM.exidx.text.delay_us) refers to delay.o(.text.delay_us) for [Anonymous Symbol]
+    delay.o(.text.delay_ms) refers to delay.o(.text.delay_us) for delay_us
+    delay.o(.ARM.exidx.text.delay_ms) refers to delay.o(.text.delay_ms) for [Anonymous Symbol]
+    delay.o(.text.delay_s) refers to delay.o(.text.delay_ms) for delay_ms
+    delay.o(.ARM.exidx.text.delay_s) refers to delay.o(.text.delay_s) for [Anonymous Symbol]
+    ntb_time.o(.text.get_time_stamp_ms) refers to ntb_time.o(.text.DL_Timer_getTimerCount) for DL_Timer_getTimerCount
+    ntb_time.o(.text.get_time_stamp_ms) refers to ldiv.o(.text) for __aeabi_ldivmod
+    ntb_time.o(.ARM.exidx.text.get_time_stamp_ms) refers to ntb_time.o(.text.get_time_stamp_ms) for [Anonymous Symbol]
+    ntb_time.o(.ARM.exidx.text.DL_Timer_getTimerCount) refers to ntb_time.o(.text.DL_Timer_getTimerCount) for [Anonymous Symbol]
+    servo.o(.text.Servo_Init) refers to servo.o(.text.DL_Timer_startCounter) for DL_Timer_startCounter
+    servo.o(.ARM.exidx.text.Servo_Init) refers to servo.o(.text.Servo_Init) for [Anonymous Symbol]
+    servo.o(.ARM.exidx.text.DL_Timer_startCounter) refers to servo.o(.text.DL_Timer_startCounter) for [Anonymous Symbol]
+    servo.o(.text.Servo_SetAngle) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    servo.o(.text.Servo_SetAngle) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for DL_Timer_setCaptureCompareValue
+    servo.o(.ARM.exidx.text.Servo_SetAngle) refers to servo.o(.text.Servo_SetAngle) for [Anonymous Symbol]
+    dl_common.o(.ARM.exidx.text.DL_Common_delayCycles) refers to dl_common.o(.text.DL_Common_delayCycles) for [Anonymous Symbol]
+    dl_dma.o(.ARM.exidx.text.DL_DMA_initChannel) refers to dl_dma.o(.text.DL_DMA_initChannel) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_setClockConfig) refers to dl_i2c.o(.text.DL_I2C_setClockConfig) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_getClockConfig) refers to dl_i2c.o(.text.DL_I2C_getClockConfig) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_fillControllerTXFIFO) refers to dl_i2c.o(.text.DL_I2C_fillControllerTXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_flushControllerTXFIFO) refers to dl_i2c.o(.text.DL_I2C_flushControllerTXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_flushControllerRXFIFO) refers to dl_i2c.o(.text.DL_I2C_flushControllerRXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_fillTargetTXFIFO) refers to dl_i2c.o(.text.DL_I2C_fillTargetTXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_flushTargetTXFIFO) refers to dl_i2c.o(.text.DL_I2C_flushTargetTXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_flushTargetRXFIFO) refers to dl_i2c.o(.text.DL_I2C_flushTargetRXFIFO) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_transmitTargetDataBlocking) refers to dl_i2c.o(.text.DL_I2C_transmitTargetDataBlocking) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_transmitTargetDataCheck) refers to dl_i2c.o(.text.DL_I2C_transmitTargetDataCheck) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_receiveTargetDataBlocking) refers to dl_i2c.o(.text.DL_I2C_receiveTargetDataBlocking) for [Anonymous Symbol]
+    dl_i2c.o(.ARM.exidx.text.DL_I2C_receiveTargetDataCheck) refers to dl_i2c.o(.text.DL_I2C_receiveTargetDataCheck) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setClockConfig) refers to dl_timer.o(.text.DL_Timer_setClockConfig) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getClockConfig) refers to dl_timer.o(.text.DL_Timer_getClockConfig) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initTimerMode) refers to dl_timer.o(.text.DL_Timer_initTimerMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareValue) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareValue) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareCtl) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareCtl) for [Anonymous Symbol]
+    dl_timer.o(.text.DL_Timer_initCaptureMode) refers to dl_timer.o(.rodata..Lswitch.table.DL_Timer_initCompareMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initCaptureMode) refers to dl_timer.o(.text.DL_Timer_initCaptureMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareInput) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareInput) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initCaptureTriggerMode) refers to dl_timer.o(.text.DL_Timer_initCaptureTriggerMode) for [Anonymous Symbol]
+    dl_timer.o(.text.DL_Timer_initCaptureCombinedMode) refers to dl_timer.o(.rodata..Lswitch.table.DL_Timer_initCompareMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initCaptureCombinedMode) refers to dl_timer.o(.text.DL_Timer_initCaptureCombinedMode) for [Anonymous Symbol]
+    dl_timer.o(.text.DL_Timer_initCompareMode) refers to dl_timer.o(.rodata..Lswitch.table.DL_Timer_initCompareMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initCompareMode) refers to dl_timer.o(.text.DL_Timer_initCompareMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initCompareTriggerMode) refers to dl_timer.o(.text.DL_Timer_initCompareTriggerMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareValue) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareValue) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareCtl) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareCtl) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setSecondCompSrcDn) refers to dl_timer.o(.text.DL_Timer_setSecondCompSrcDn) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getSecondCompSrcDn) refers to dl_timer.o(.text.DL_Timer_getSecondCompSrcDn) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setSecondCompSrcUp) refers to dl_timer.o(.text.DL_Timer_setSecondCompSrcUp) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getSecondCompSrcUp) refers to dl_timer.o(.text.DL_Timer_getSecondCompSrcUp) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setSecondCompActionDn) refers to dl_timer.o(.text.DL_Timer_setSecondCompActionDn) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getSecondCompActionDn) refers to dl_timer.o(.text.DL_Timer_getSecondCompActionDn) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setSecondCompActionUp) refers to dl_timer.o(.text.DL_Timer_setSecondCompActionUp) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getSecondCompActionUp) refers to dl_timer.o(.text.DL_Timer_getSecondCompActionUp) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_enableSuppressionOfCompEvent) refers to dl_timer.o(.text.DL_Timer_enableSuppressionOfCompEvent) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_disableSuppressionOfCompEvent) refers to dl_timer.o(.text.DL_Timer_disableSuppressionOfCompEvent) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptCompUpdateMethod) refers to dl_timer.o(.text.DL_Timer_setCaptCompUpdateMethod) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptCompUpdateMethod) refers to dl_timer.o(.text.DL_Timer_getCaptCompUpdateMethod) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptCompActUpdateMethod) refers to dl_timer.o(.text.DL_Timer_setCaptCompActUpdateMethod) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptCompActUpdateMethod) refers to dl_timer.o(.text.DL_Timer_getCaptCompActUpdateMethod) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareOutCtl) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareOutCtl) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareOutCtl) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareOutCtl) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareAction) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareAction) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareAction) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareAction) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_overrideCCPOut) refers to dl_timer.o(.text.DL_Timer_overrideCCPOut) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareInput) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareInput) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setCaptureCompareInputFilter) refers to dl_timer.o(.text.DL_Timer_setCaptureCompareInputFilter) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getCaptureCompareInputFilter) refers to dl_timer.o(.text.DL_Timer_getCaptureCompareInputFilter) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_enableCaptureCompareInputFilter) refers to dl_timer.o(.text.DL_Timer_enableCaptureCompareInputFilter) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_disableCaptureCompareInputFilter) refers to dl_timer.o(.text.DL_Timer_disableCaptureCompareInputFilter) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_isCaptureCompareInputFilterEnabled) refers to dl_timer.o(.text.DL_Timer_isCaptureCompareInputFilterEnabled) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_saveConfiguration) refers to dl_timer.o(.text.DL_Timer_saveConfiguration) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_restoreConfiguration) refers to dl_timer.o(.text.DL_Timer_restoreConfiguration) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_initFourCCPWMMode) refers to dl_timer.o(.text.DL_Timer_initFourCCPWMMode) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_setFaultSourceConfig) refers to dl_timer.o(.text.DL_Timer_setFaultSourceConfig) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_getFaultSourceConfig) refers to dl_timer.o(.text.DL_Timer_getFaultSourceConfig) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_TimerA_saveConfiguration) refers to dl_timer.o(.text.DL_TimerA_saveConfiguration) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_TimerA_restoreConfiguration) refers to dl_timer.o(.text.DL_TimerA_restoreConfiguration) for [Anonymous Symbol]
+    dl_timer.o(.ARM.exidx.text.DL_Timer_configQEIHallInputMode) refers to dl_timer.o(.text.DL_Timer_configQEIHallInputMode) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_init) refers to dl_uart.o(.text.DL_UART_init) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_setClockConfig) refers to dl_uart.o(.text.DL_UART_setClockConfig) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_getClockConfig) refers to dl_uart.o(.text.DL_UART_getClockConfig) for [Anonymous Symbol]
+    dl_uart.o(.text.DL_UART_configBaudRate) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    dl_uart.o(.ARM.exidx.text.DL_UART_configBaudRate) refers to dl_uart.o(.text.DL_UART_configBaudRate) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_configIrDAMode) refers to dl_uart.o(.text.DL_UART_configIrDAMode) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_setIrDAPulseLength) refers to dl_uart.o(.text.DL_UART_setIrDAPulseLength) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_receiveDataBlocking) refers to dl_uart.o(.text.DL_UART_receiveDataBlocking) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_transmitDataBlocking) refers to dl_uart.o(.text.DL_UART_transmitDataBlocking) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_receiveDataCheck) refers to dl_uart.o(.text.DL_UART_receiveDataCheck) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_transmitDataCheck) refers to dl_uart.o(.text.DL_UART_transmitDataCheck) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_drainRXFIFO) refers to dl_uart.o(.text.DL_UART_drainRXFIFO) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_fillTXFIFO) refers to dl_uart.o(.text.DL_UART_fillTXFIFO) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_Main_saveConfiguration) refers to dl_uart.o(.text.DL_UART_Main_saveConfiguration) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_Main_restoreConfiguration) refers to dl_uart.o(.text.DL_UART_Main_restoreConfiguration) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_Extend_saveConfiguration) refers to dl_uart.o(.text.DL_UART_Extend_saveConfiguration) for [Anonymous Symbol]
+    dl_uart.o(.ARM.exidx.text.DL_UART_Extend_restoreConfiguration) refers to dl_uart.o(.text.DL_UART_Extend_restoreConfiguration) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_configSYSPLL) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_configSYSPLL) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_setLFCLKSourceLFXT) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setLFCLKSourceLFXT) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_switchMCLKfromSYSOSCtoLFCLK) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromSYSOSCtoLFCLK) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_switchMCLKfromLFCLKtoSYSOSC) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromLFCLKtoSYSOSC) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromSYSOSCtoHSCLK) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_switchMCLKfromHSCLKtoSYSOSC) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_switchMCLKfromHSCLKtoSYSOSC) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_setHFCLKSourceHFXT) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setHFCLKSourceHFXT) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_setHFCLKSourceHFXTParams) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_setHFCLKSourceHFXTParams) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_configFCC) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_configFCC) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_getPowerPolicyRUNSLEEP) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_getPowerPolicyRUNSLEEP) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_getPowerPolicySTOP) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_getPowerPolicySTOP) for [Anonymous Symbol]
+    dl_sysctl_mspm0g1x0x_g3x0x.o(.ARM.exidx.text.DL_SYSCTL_getPowerPolicySTANDBY) refers to dl_sysctl_mspm0g1x0x_g3x0x.o(.text.DL_SYSCTL_getPowerPolicySTANDBY) for [Anonymous Symbol]
+    atof.o(i.__softfp_atof) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atof.o(i.__softfp_atof) refers to errno.o(i.__read_errno) for __read_errno
+    atof.o(i.__softfp_atof) refers to strtod.o(.text) for __strtod_int
+    atof.o(i.__softfp_atof) refers to errno.o(i.__set_errno) for __set_errno
+    atof.o(i.atof) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atof.o(i.atof) refers to errno.o(i.__read_errno) for __read_errno
+    atof.o(i.atof) refers to strtod.o(.text) for __strtod_int
+    atof.o(i.atof) refers to errno.o(i.__set_errno) for __set_errno
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    ldiv.o(.text) refers to uldiv.o(.text) for __aeabi_uldivmod
+    strtok.o(.text) refers to strtok.o(.data) for .data
+    strtok_r.o(.text) refers to strtok_r.o(.data) for .data
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to uart.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to uart.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atoi.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    atoi.o(.text) refers to strtol.o(.text) for strtol
+    fadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fadd.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    fcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmplt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpge.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpgt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpeq.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_mspm0g350x_uvision.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_mspm0g350x_uvision.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    idiv_div0.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    strtod.o(.text) refers to scanf_fp.o(.text) for _scanf_real
+    strtod.o(.text) refers to _sgetc.o(.text) for _sgetc
+    strtod.o(.text) refers to isspace_o.o(.text) for isspace
+    strtol.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    strtol.o(.text) refers to _strtoul.o(.text) for _strtoul
+    strtol.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    isspace_c.o(.text) refers to ctype_c.o(.text) for __ctype_lookup
+    ctype_o.o(.text) refers to ctype_o.o(.constdata) for .constdata
+    ctype_o.o(.constdata) refers to ctype_o.o(.constdata) for __ctype_table
+    isalnum_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isalpha_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isblank_o.o(.text) refers to ctype_o.o(.constdata) for __ctype_table
+    iscntrl_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isgraph_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    islower_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isprint_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    ispunct_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isspace_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isupper_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    isxdigit_o.o(.text) refers to ctype_o.o(.text) for __rt_ctype_table
+    scanf_fp.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(.text) refers to llmul.o(.text) for __aeabi_lmul
+    scanf_fp.o(.text) refers to dfltul.o(.text) for __aeabi_ul2d
+    scanf_fp.o(.text) refers to dmul.o(.text) for __aeabi_dmul
+    scanf_fp.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
+    scanf_fp.o(.text) refers to scanf_fp.o(i._is_digit) for _is_digit
+    scanf_fp.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    _strtoul.o(.text) refers to _chval.o(.text) for _chval
+    _strtoul.o(.text) refers to errno.o(i.__aeabi_errno_addr) for __aeabi_errno_addr
+    ctype_c.o(.text) refers to ctype_c.o(.constdata) for .constdata
+    dfltul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    depilogue.o(i.__ARM_clz) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(i._is_digit) refers (Special) to iusefp.o(.text) for __I$use$fp
+
